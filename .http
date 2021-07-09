@@ -1,0 +1,45 @@
+
+
+# GET all links 
+GET http://localhost:3001/api/v1.0/links
+
+
+
+###
+
+# GET single link
+GET http://localhost:3001/api/v1.0/links/QRba7azA9
+
+
+
+###
+
+# CREATE LINK
+POST http://localhost:3001/api/v1.0/links
+content-type: application/json
+
+{
+    "longUrl": "https://www.yahoo.com"
+}
+
+
+
+###
+
+# UPDATE single link
+PUT http://localhost:3001/api/v1.0/links/QRba7azA9
+content-type: application/json
+
+{
+  "longUrl": "https://www.yahoo.com"
+}
+
+###
+
+
+
+# DELETE single link
+DELETE http://localhost:3001/api/v1.0/links/QRba7azA9
+
+
+###

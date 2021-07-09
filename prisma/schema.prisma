@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Link model
+model Link {
+
+  longUrl String @id
+
+  urlCode String @db.VarChar(255) @unique 
+  
+  shortUrl String @db.VarChar(255)
+  
+  createdAt DateTime @default(now())
+
+  updatedAt DateTime @updatedAt
+
+}
+
+// Link model
+model Redirect {
+
+  id Int @id @default(autoincrement())
+
+  ip String @db.VarChar(255) @unique 
+  
+  country String @db.VarChar(255)
+
+  device String @db.VarChar(150)
+
+  browser String 
+  
+  createdAt DateTime @default(now())
+
+  updatedAt DateTime @updatedAt
+
+}
+
