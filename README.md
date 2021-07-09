@@ -10,7 +10,7 @@ Hi this is a starting point url shortener project written in Nodejs and express.
  - Nodejs with expressjs 
  - Prisma2 as ORM
 
-**
+
 ## Installation
 To install this project you need to
 
@@ -31,5 +31,8 @@ Make sure your database server is running before you apply the migrations.
 To increase the overall performance of the redirection  function without increasing the cost, A very good sollution is to rewrite the **redirection function ( Controller )**  as a stand alone service written in a more robust programming language like **Rust** or **GOlang ( Prefered )**, This sollution will **multiply the number of requests** the server handles per/second by at least **8X times** taking goland as an example. 
 
 To get a better idea of what i am talking about check this performance test made by [techEmpower](https://www.techempower.com/benchmarks/). Do a search of **fiber-prefork** ( golang framework ) vs Express ( Nodejs framework ).
+
+**Security on the redirection service**
+A good way to protect the redirection service and keep good server performance at the same time is by using a **rate limiter** to limit **DOS ATACKS** that can stress the server resources.
 
 

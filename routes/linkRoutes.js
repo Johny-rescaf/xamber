@@ -15,7 +15,7 @@ router.get("/api/v1.0/links/:urlCode", linksController.getSingleLink);
 // Add a link (Generate a new link) 
 router.post("/api/v1.0/links", linksController.addLink);
 
-// GET single link 
+// UPDATE single link 
 router.put("/api/v1.0/links/:urlCode", linksController.updateLink);
 
 // DELETE a link 

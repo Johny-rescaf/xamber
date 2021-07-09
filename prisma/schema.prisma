@@ -25,7 +25,7 @@ model Link {
 
 }
 
-// Link model
+// Redirect model
 model Redirect {
 
   id Int @id @default(autoincrement())
